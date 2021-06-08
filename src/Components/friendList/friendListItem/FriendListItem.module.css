@@ -1,0 +1,23 @@
+.item {
+    display: flex;
+    width: 300px;
+    height: 184px;
+    justify-content: space-around;
+    border: 2px solid rgb(30, 6, 56);
+    align-items: center;
+
+}
+
+.status_online {
+background-color: green;
+width: 40px;
+height: 40px;
+border-radius: 15px;
+}
+
+.status_offline {
+background-color: red;
+width: 40px;
+height: 40px;
+border-radius: 15px;
+}

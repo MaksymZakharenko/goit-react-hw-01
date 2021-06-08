@@ -1,0 +1,9 @@
+.transaction_history {
+    border: 1px solid brown;
+}
+
+.tableTitle {
+    color: rgb(240, 34, 120);
+      border: 1px solid brown;
+      background-color: rgb(24, 79, 88);
+}
