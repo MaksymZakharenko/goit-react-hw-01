@@ -8,8 +8,7 @@
   border: 2px solid brown;
 }
 .stat {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   border: 1px solid rgb(88, 84, 84);
   background-color: rgb(165, 199, 12);
   ;

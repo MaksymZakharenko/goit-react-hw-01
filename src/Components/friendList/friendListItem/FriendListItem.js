@@ -1,7 +1,8 @@
-import React from "react";
 import styles from "./FriendListItem.module.css";
+import PropTypes from 'prop-types';
 
 const FriendListItem = ({ friend }) => {
+
   return (
     <li className={styles.item}>
       <span
@@ -16,3 +17,12 @@ const FriendListItem = ({ friend }) => {
 };
 
 export default FriendListItem;
+
+FriendListItem.propTypes = {
+  friend: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
+  }),
+};

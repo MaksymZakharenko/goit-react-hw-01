@@ -7,6 +7,7 @@ import Transactions from "../transactions/Transactions";
 import styles from "./Main.module.css";
 
 const { user, statistics, friends, transactions } = data;
+
 const Main = () => {
   return (
     <main>
@@ -20,11 +21,11 @@ const Main = () => {
             stats={user.stats}
           />
           <div className={styles.stat}>
-            <Statistics statistics={statistics}/>
+            <Statistics stats={statistics} title="Upload Stats" />
           </div>
         </div>
         <FriendList friends={friends} />
-        <Transactions transactions={transactions} />
+        <Transactions items={transactions} />
       </div>
     </main>
   );

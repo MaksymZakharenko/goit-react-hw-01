@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from "./TransactionsItem.module.css"
+import PropTypes from "prop-types";
 
 const TransactionsItem = ({ transaction }) => {
+
   return (
     <tr>
       <td className={styles.table}>{transaction.type}</td>
@@ -12,3 +14,12 @@ const TransactionsItem = ({ transaction }) => {
 };
 
 export default TransactionsItem;
+
+TransactionsItem.propTypes = {
+  transaction: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+  }).isRequired,
+};

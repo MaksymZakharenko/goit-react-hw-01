@@ -1,10 +1,11 @@
 import React from "react";
 import TransactionsItem from "./transactionsItem/TransactionsItem";
 import styles from "./Transaction.module.css";
+import PropTypes from "prop-types";
 
-const Transactions = ({ transactions }) => {
+const transactions = ({ items }) => {
   return (
-    <table class={styles.transaction_history}>
+    <table className={styles.transaction_history}>
       <thead className={styles.tableTitle}>
         <tr>
           <th>Type</th>
@@ -14,7 +15,7 @@ const Transactions = ({ transactions }) => {
       </thead>
 
       <tbody>
-        {transactions.map((transaction) => (
+        {items.map((transaction) => (
           <TransactionsItem transaction={transaction} key={transaction.id} />
         ))}
       </tbody>
@@ -22,4 +23,8 @@ const Transactions = ({ transactions }) => {
   );
 };
 
-export default Transactions;
+export default transactions;
+
+transactions.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
